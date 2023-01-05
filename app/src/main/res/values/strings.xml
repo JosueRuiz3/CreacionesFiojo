@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Creaciones Fiojo</string>
+
+
+    <string name="ek_img_content">ExportKit Image</string>
+    <string name="iniciar_sesion_ek1_string">INICIAR SESION</string>
+    <string name="todavia_no_tienes_una_cuenta__string">Todavia no tienes una cuenta? </string>
+    <string name="registrarse_string">Registrarse</string>
+
+    <string name="accede_a_tu_cuenta_string">ACCEDE A TU CUENTA</string>
+    <string name="iniciar_sesion_ek2_string">INICIAR SESION</string>
+    <string name="iniciar_sesion_ek3_string">CREA UNA CUENTA</string>
+    <string name="todavia_no_eres_cliente__string">Todavia no eres cliente?</string>
+    <string name="has_olvidado_tu_contrase_a__string">Has olvidado tu contraseña?</string>
+    <string name="restablecer_string">Olvido su Contraseña?</string>
+    <string name="tus_datos_string">TUS DATOS</string>
+    <string name="contrase_a__ek1_string">Contrasea*</string>
+    <string name="confirmar_contrase_a__string">Confirmar Contrasea*</string>
+    <string name="nombre__string">Nombre*</string>
+    <string name="apellido__string">Apellido*</string>
+    <string name="crea_una_cuenta_string">CREA UNA CUENTA</string>
+    <string name="iniciar_sesion_ek4_string">REGISTRARSE</string>
+    <string name="creaciones_fiojo_string">Creaciones FioJo</string>
+    <string name="pared_ek1_string">Pared</string>
+    <string name="macetas_ek1_string">Macetas</string>
+    <string name="jardin_ek1_string">Jardin</string>
+    <string name="religion_string">Religion</string>
+    <string name="pintamos_con_amor_y_a_tu_gusto_string">Pintamos con amor y a tu gusto</string>
+    <string name="categorias_ek1_string">Categorias</string>
+    <string name="cerrarsesion">Cerrar Sesion</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/drawerLayout"
+    android:layout_height="match_parent"
+    tools:context=".DetalleReligiosoPrincipal">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FDECEC">
+
+        <RelativeLayout
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="820dp">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                app:cardBackgroundColor="#BCFFFFFF"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="10dp">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/topAppBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:navigationIcon="@drawable/menu_1"
+                    android:background="#FF7FF2" />
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btn_selecfoto"
+                android:layout_width="280dp"
+                android:layout_height="375dp"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="60dp"
+                android:clickable="true"
+                android:elevation="10dp"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                app:cardBackgroundColor="#A3A3A3"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,DuplicateClickableBoundsCheck">
+
+                <ImageView
+                    android:id="@+id/jardin_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/btnatras"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="70dp"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="4dp"
+                    android:src="@drawable/atras" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="390dp"
+                android:layout_height="290dp"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginTop="410dp"
+                android:layout_marginStart="10dp"
+                tools:ignore="SpeakableTextPresentCheck"
+                app:cardBackgroundColor="#00FF7FF2">
+
+                <RelativeLayout
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:id="@+id/txtnombre"
+                        android:layout_width="360dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="1dp"
+                        android:elevation="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:text="Nombre"
+                        tools:ignore="TouchTargetSizeCheck"
+                        android:gravity="center|start"
+                        android:focusable="false"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="184dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="155dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="1dp"
+                        android:elevation="4dp"
+                        android:textColor="@color/colortext"
+                        android:textSize="25dp"
+                        android:text="Dimensiones:"
+                        tools:ignore="TouchTargetSizeCheck"
+                        android:gravity="center|start"
+                        android:focusable="false"/>
+
+                    <TextView
+                        android:id="@+id/txtdimensiones"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="160dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="4dp"
+                        android:textColor="@color/colortext"
+                        android:textSize="25dp"
+                        android:text="Dimensiones"
+                        tools:ignore="TouchTargetSizeCheck"
+                        android:focusable="false"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="132dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="125dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="1dp"
+                        android:elevation="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:text="Materiales: "
+                        tools:ignore="TouchTargetSizeCheck"
+                        android:gravity="center|start"
+                        android:focusable="false"/>
+                    <TextView
+                        android:id="@+id/txtmaterial"
+                        android:layout_width="180dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="136dp"
+                        android:elevation="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:text="Material"
+                        tools:ignore="TouchTargetSizeCheck"
+                        android:gravity="center|start"
+                        android:focusable="false"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="80dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="52dp">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginTop="0dp"
+                        android:elevation="4dp"
+                        android:focusable="false"
+                        android:gravity="center|start"
+                        android:text="Precio: "
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        tools:ignore="TouchTargetSizeCheck" />
+                    <TextView
+                        android:id="@+id/txtprecio"
+                        android:layout_width="170dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="98dp"
+                        android:elevation="4dp"
+                        android:focusable="false"
+                        android:gravity="center|start"
+                        android:text="Precio"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        tools:ignore="TouchTargetSizeCheck" />
+                    <TextView
+                        android:id="@+id/signoColon"
+                        android:layout_width="26dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginTop="2dp"
+                        android:elevation="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="19dp"
+                        android:text="	₡"
+                        tools:ignore="TouchTargetSizeCheck"
+                        android:gravity="center|start"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="408dp"
+                android:layout_marginStart="170dp"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    tools:ignore="MissingConstraints"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navegationView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#FF7FF2"
+        app:itemTextColor="@color/black"
+        app:subheaderColor="@color/black"
+        app:itemIconTint="@color/black"
+        app:menu="@menu/navegation_menu"
+        android:layout_gravity="start"/>
+</androidx.drawerlayout.widget.DrawerLayout>

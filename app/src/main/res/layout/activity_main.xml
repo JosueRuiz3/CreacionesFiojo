@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/logo"
+                    android:contentDescription="logo"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="369dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/login"
+                    android:layout_marginTop="670dp"
+                    android:layout_width="320dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginLeft="45dp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="5dp">
+
+                    <TextView
+                        android:layout_gravity="center_horizontal|center"
+                        android:gravity="center"
+                        android:textSize="15dp"
+                        android:shadowColor="#7A000000"
+                        android:textColor="@color/colortext"
+                        android:layout_width="126dp"
+                        android:layout_height="28.5dp"
+                        android:text="@string/iniciar_sesion_ek1_string"
+                        android:elevation="4dp" />
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:layout_marginTop="730dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:textSize="18sp"
+                        android:textColor="@color/colortext"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/todavia_no_tienes_una_cuenta__string"/>
+
+                    <TextView
+                        android:id="@+id/registrarse"
+                        android:textSize="18dp"
+                        android:layout_marginStart="240dp"
+                        android:textColor="@color/colortext"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        android:text="@string/registrarse_string"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </RelativeLayout>
+            </RelativeLayout>
+    </ScrollView>
+</HorizontalScrollView>

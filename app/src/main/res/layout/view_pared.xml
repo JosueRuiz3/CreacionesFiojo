@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="185dp"
+    android:layout_height="280dp"
+    android:layout_alignParentLeft="true"
+    android:layout_marginLeft="10dp"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="17dp"
+    android:background="#00000000"
+    android:clickable="true"
+    android:id="@+id/btn_editar"
+    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="166dp"
+        android:layout_height="210dp"
+        android:layout_gravity="center_horizontal|center"
+        android:layout_marginStart="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="#00C978C9"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <RelativeLayout
+            android:layout_width="147dp"
+            android:layout_height="210dp"
+            android:layout_gravity="center_horizontal|center"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_width="147dp"
+                android:layout_height="195dp"
+                android:elevation="50dp"
+                app:cardCornerRadius="7dp">
+
+                <ImageView
+                    android:id="@+id/pared"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="10dp"
+                    android:gravity="center_horizontal|top"
+                    app:srcCompat="@drawable/ic_launcher_foreground" />
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/precio"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="230dp"
+        android:elevation="10dp"
+        android:shadowColor="#40000000"
+        android:text="Precio"
+        android:textColor="@color/colortext"
+        android:gravity="center_horizontal|top"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/signoColon"
+        android:layout_width="16dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="212dp"
+        android:elevation="10dp"
+        android:shadowColor="#40000000"
+        android:text="	₡"
+        android:textColor="@color/colortext"
+        android:gravity="center_horizontal|top"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/nombre"
+        android:layout_width="185dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="207dp"
+        android:elevation="10dp"
+        android:shadowColor="#40000000"
+        android:text="Nombre"
+        android:textColor="@color/colortext"
+        android:gravity="center_horizontal"
+        android:textSize="19dp" />
+</RelativeLayout>

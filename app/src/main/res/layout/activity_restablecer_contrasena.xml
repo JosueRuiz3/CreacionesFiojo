@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/btnatras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                tools:ignore="TouchTargetSizeCheck">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="iconusers_ek1"
+                    android:elevation="4dp"
+                    android:src="@drawable/atras" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="205dp"
+                android:layout_marginStart="-20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_gravity="center_horizontal|center"
+                    android:gravity="center"
+                    android:textSize="19dp"
+                    android:textColor="@color/colortext"
+                    android:layout_marginLeft="52dp"
+                    android:layout_width="270dp"
+                    android:layout_height="28.5dp"
+                    android:text="Ingrese su Correo Electronico"
+                    android:elevation="4dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/txtusuario"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginStart="59dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="9dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <RelativeLayout
+                        android:layout_marginStart="46dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/editTextEmail"
+                            android:layout_width="291dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="1dp"
+                            android:alpha="0.81000000238419"
+                            android:background="@drawable/___shape"
+                            android:elevation="4dp"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/black"
+                            android:hint="Correo Electrónico*"
+                            android:textColorHint="@color/black"
+                            android:textSize="18dp"
+                            tools:ignore="TouchTargetSizeCheck"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="4dp">
+
+                            <View
+                                android:background="@drawable/___shape"
+                                android:alpha="0.81000000238419"
+                                android:layout_width="47.52dp"
+                                android:layout_height="50dp"
+                                android:elevation="4dp" />
+
+                            <ImageView
+                                android:src="@drawable/iconusers"
+                                android:contentDescription="iconusers_ek1"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_width="30.57dp"
+                                android:layout_height="32dp"
+                                android:elevation="4dp" />
+                        </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnrestablecer"
+                android:layout_marginTop="400dp"
+                android:layout_marginBottom="1dp"
+                android:layout_width="320dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginLeft="46dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="5dp">
+
+                <TextView
+                    android:layout_gravity="center_horizontal|center"
+                    android:gravity="center"
+                    android:textSize="19dp"
+                    android:shadowColor="#7A000000"
+                    android:textColor="@color/colortext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:text="Restablecer"
+                    android:elevation="4dp" />
+            </androidx.cardview.widget.CardView>
+
+
+            <RelativeLayout
+                android:layout_marginTop="108dp"
+                android:layout_marginStart="110dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_gravity="center_horizontal|center"
+                    android:gravity="center"
+                    android:textSize="19dp"
+                    android:textColor="@color/colortext"
+                    android:layout_marginLeft="-3dp"
+                    android:layout_width="207dp"
+                    android:layout_height="29dp"
+                    android:text="Restablecer Contraseña"
+                    android:elevation="4dp" />
+
+                <View
+                    android:background="@drawable/line_1_shape"
+                    android:layout_marginStart="-5dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_width="207dp"
+                    android:layout_height="1dp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_marginTop="508dp"
+                android:layout_marginStart="160dp"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    tools:ignore="MissingConstraints"/>
+        </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</HorizontalScrollView>
