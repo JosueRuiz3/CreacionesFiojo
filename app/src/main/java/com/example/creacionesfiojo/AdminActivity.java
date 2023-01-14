@@ -26,7 +26,7 @@ public class AdminActivity extends AppCompatActivity {
     private View cerrarsesion;
     private FirebaseAuth mAuth;
     private FirebaseFirestore mFirestore;
-    private RelativeLayout jardin, religioso, pared, macetas;
+    private CardView jardin, religioso, pared, macetas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +36,10 @@ public class AdminActivity extends AppCompatActivity {
         NavigationView navigationView = findViewById(R.id.navegationView);
         DrawerLayout drawerLayout = findViewById(R.id.drawerLayout);
         MaterialToolbar toolbar = findViewById(R.id.topAppBar);
-        jardin = (RelativeLayout) findViewById(R.id.jardin);
-        religioso = (RelativeLayout) findViewById(R.id.religioso);
-        macetas = (RelativeLayout) findViewById(R.id.macetas);
-        pared = (RelativeLayout) findViewById(R.id.pared);
+        jardin = findViewById(R.id.jardin);
+        religioso = findViewById(R.id.religioso);
+        macetas = findViewById(R.id.macetas);
+        pared = findViewById(R.id.pared);
 
         jardin.setOnClickListener(new View.OnClickListener() {
             @Override
