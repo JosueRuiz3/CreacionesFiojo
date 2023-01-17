@@ -100,10 +100,10 @@ public class LoginActivity extends AppCompatActivity {
         btniniciarsesion.setOnClickListener(new CardView.OnClickListener() {
             @Override
             public void onClick(View view2) {
-              //  iniciarSesion();
-               Intent intent = new Intent(LoginActivity.this, AdminActivity.class);
+               iniciarSesion();
+              // Intent intent = new Intent(LoginActivity.this, AdminActivity.class);
                //Intent intent = new Intent(LoginActivity.this, PrincipalActivity.class);
-               startActivity(intent);
+              // startActivity(intent);
             }
 
         });

@@ -27,7 +27,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class PrincipalActivity extends AppCompatActivity {
 
-    private RelativeLayout jardin, religioso, pared, macetas;
+    private CardView jardin, religioso, pared, macetas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +39,10 @@ public class PrincipalActivity extends AppCompatActivity {
         MaterialToolbar toolbar = findViewById(R.id.topAppBar);
 
         jardin = findViewById(R.id.jardin);
-        jardin = (RelativeLayout) findViewById(R.id.jardin);
-        religioso = (RelativeLayout) findViewById(R.id.religioso);
-        macetas = (RelativeLayout) findViewById(R.id.macetas);
-        pared = (RelativeLayout) findViewById(R.id.pared);
+        jardin = findViewById(R.id.jardin);
+        religioso = findViewById(R.id.religioso);
+        macetas = findViewById(R.id.macetas);
+        pared = findViewById(R.id.pared);
 
 
         jardin.setOnClickListener(new View.OnClickListener() {

@@ -46,20 +46,20 @@
                 android:textColor="@color/colortext"
                 android:layout_width="200dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="50dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="80dp"
                 android:text="Categorias" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="136dp"
+                android:layout_marginTop="140dp"
                 android:background="#00000000">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/jardin"
                     android:layout_width="170dp"
-                    android:layout_height="228dp"
+                    android:layout_height="225dp"
                     android:layout_marginStart="20dp"
                     android:clickable="true"
                     android:elevation="5dp"
@@ -71,7 +71,7 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="155dp"
-                        android:layout_height="190dp"
+                        android:layout_height="205dp"
                         android:layout_marginStart="7dp"
                         android:layout_marginTop="10dp"
                         app:cardCornerRadius="10dp">
@@ -84,21 +84,27 @@
                             android:src="@drawable/jardin" />
                     </androidx.cardview.widget.CardView>
 
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="170dp"
+                        app:cardBackgroundColor="#B3806180">
+                    </androidx.cardview.widget.CardView>
                     <TextView
                         android:gravity="center_horizontal|top"
                         android:textSize="25dp"
-                        android:textColor="@color/colortext"
+                        android:textColor="#000000"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:elevation="10dp"
-                        android:layout_marginTop="197dp"
+                        android:layout_marginTop="180dp"
                         android:text="Jardin" />
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/pared"
                     android:layout_width="170dp"
-                    android:layout_height="228dp"
+                    android:layout_height="225dp"
                     android:layout_marginStart="217dp"
                     android:clickable="true"
                     android:elevation="5dp"
@@ -110,34 +116,41 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="155dp"
-                        android:layout_height="190dp"
+                        android:layout_height="205dp"
                         android:layout_marginStart="7dp"
                         android:layout_marginTop="10dp"
                         app:cardCornerRadius="10dp">
+
                         <ImageView
-                            android:layout_width="205dp"
+                            android:layout_width="209dp"
                             android:layout_height="215dp"
                             android:layout_marginStart="-24dp"
                             android:layout_marginTop="-2dp"
                             android:gravity="center_horizontal|top"
-                            android:src="@drawable/jardin" />
+                            android:src="@drawable/pared" />
                     </androidx.cardview.widget.CardView>
 
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="170dp"
+                        app:cardBackgroundColor="#B3806180">
+                    </androidx.cardview.widget.CardView>
                     <TextView
                         android:gravity="center_horizontal|top"
                         android:textSize="25dp"
-                        android:textColor="@color/colortext"
+                        android:textColor="#000000"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:elevation="10dp"
-                        android:layout_marginTop="197dp"
+                        android:layout_marginTop="180dp"
                         android:text="Pared" />
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/religioso"
                     android:layout_width="170dp"
-                    android:layout_height="228dp"
+                    android:layout_height="225dp"
                     android:layout_marginStart="217dp"
                     android:layout_marginTop="270dp"
                     android:clickable="true"
@@ -150,7 +163,7 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="155dp"
-                        android:layout_height="190dp"
+                        android:layout_height="205dp"
                         android:layout_marginStart="7dp"
                         android:layout_marginTop="10dp"
                         app:cardCornerRadius="10dp">
@@ -160,24 +173,30 @@
                             android:layout_marginStart="-24dp"
                             android:layout_marginTop="-2dp"
                             android:gravity="center_horizontal|top"
-                            android:src="@drawable/jardin" />
+                            android:src="@drawable/religioso" />
                     </androidx.cardview.widget.CardView>
 
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="170dp"
+                        app:cardBackgroundColor="#B3806180">
+                    </androidx.cardview.widget.CardView>
                     <TextView
                         android:gravity="center_horizontal|top"
                         android:textSize="25dp"
-                        android:textColor="@color/colortext"
+                        android:textColor="#000000"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:elevation="10dp"
-                        android:layout_marginTop="197dp"
+                        android:layout_marginTop="180dp"
                         android:text="Religioso" />
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/macetas"
                     android:layout_width="170dp"
-                    android:layout_height="228dp"
+                    android:layout_height="225dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="270dp"
                     android:clickable="true"
@@ -190,7 +209,7 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="155dp"
-                        android:layout_height="190dp"
+                        android:layout_height="205dp"
                         android:layout_marginStart="7dp"
                         android:layout_marginTop="10dp"
                         app:cardCornerRadius="10dp">
@@ -200,18 +219,24 @@
                             android:layout_marginStart="-24dp"
                             android:layout_marginTop="-2dp"
                             android:gravity="center_horizontal|top"
-                            android:src="@drawable/jardin" />
+                            android:src="@drawable/maceteras" />
                     </androidx.cardview.widget.CardView>
 
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="170dp"
+                        app:cardBackgroundColor="#B3806180">
+                    </androidx.cardview.widget.CardView>
                     <TextView
                         android:gravity="center_horizontal|top"
                         android:textSize="25dp"
-                        android:textColor="@color/colortext"
+                        android:textColor="#000000"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:elevation="10dp"
-                        android:layout_marginTop="197dp"
-                        android:text="Macetas" />
+                        android:layout_marginTop="180dp"
+                        android:text="Maceteras" />
                 </androidx.cardview.widget.CardView>
 
                 <TextView
@@ -222,7 +247,7 @@
                     android:textColor="@color/colortext"
                     android:layout_marginTop="550dp"
                     android:layout_width="match_parent"
-                    android:layout_height="68dp"
+                    android:layout_height="match_parent"
                     android:text="¡Pintamos con amor y a tu gusto!" />
             </RelativeLayout>
         </RelativeLayout>

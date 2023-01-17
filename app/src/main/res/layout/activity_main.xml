@@ -56,22 +56,23 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:textSize="18sp"
+                        android:textSize="18dp"
                         android:textColor="@color/colortext"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="@string/todavia_no_tienes_una_cuenta__string"/>
+                        android:layout_marginStart="17dp"
+                        android:text="Aun no tienes una cuenta?"/>
 
                     <TextView
                         android:id="@+id/registrarse"
                         android:textSize="18dp"
-                        android:layout_marginStart="240dp"
+                        android:layout_marginStart="230dp"
                         android:textColor="@color/colortext"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:clickable="true"
                         android:foreground="?attr/selectableItemBackgroundBorderless"
-                        android:text="@string/registrarse_string"
+                        android:text="Registrarse"
                         tools:ignore="TouchTargetSizeCheck" />
                 </RelativeLayout>
             </RelativeLayout>

@@ -36,7 +36,7 @@
                 android:textColor="@color/colortext"
                 android:layout_width="200dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="50dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="80dp"
                 android:text="Categorias" />
 
@@ -46,240 +46,188 @@
                 android:layout_marginTop="136dp"
                 android:background="#00000000">
 
-                <RelativeLayout
+                <androidx.cardview.widget.CardView
                     android:id="@+id/jardin"
-                    android:gravity="center_horizontal|top"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="170dp"
+                    android:layout_height="225dp"
+                    android:layout_marginStart="20dp"
                     android:clickable="true"
-                    android:foreground="?attr/selectableItemBackgroundBorderless">
+                    android:elevation="5dp"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center_horizontal|top"
+                    app:cardBackgroundColor="#C978C9"
+                    app:cardCornerRadius="23dp"
+                    tools:ignore="SpeakableTextPresentCheck">
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="335dp"
-                        android:layout_height="192dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="1dp"
-                        app:cardCornerRadius="10dp"
-                        android:gravity="center_horizontal|top"
-                        app:cardElevation="2dp"
-                        app:cardBackgroundColor="#72FF7FF2"
-                        tools:ignore="SpeakableTextPresentCheck">
-
-                        <RelativeLayout
-                            android:layout_width="318dp"
-                            android:layout_height="180dp"
-                            android:layout_marginStart="9dp"
-                            android:layout_marginTop="7dp"
+                        android:layout_width="155dp"
+                        android:layout_height="205dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="10dp">
+                        <ImageView
+                            android:layout_width="205dp"
+                            android:layout_height="215dp"
+                            android:layout_marginStart="-24dp"
+                            android:layout_marginTop="-2dp"
                             android:gravity="center_horizontal|top"
-                            android:background="#00000000"
-                            tools:ignore="SpeakableTextPresentCheck">
+                            android:src="@drawable/jardin" />
+                    </androidx.cardview.widget.CardView>
 
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="320dp"
-                                android:layout_height="186dp"
-                                android:elevation="50dp"
-                                android:gravity="center_horizontal|top"
-                                app:cardBackgroundColor="#00C978C9"
-                                app:cardCornerRadius="10dp">
-
-                                <ImageView
-                                    android:layout_width="420dp"
-                                    android:layout_height="220dp"
-                                    android:layout_marginTop="-15dp"
-                                    android:layout_marginStart="-55dp"
-                                    android:gravity="center_horizontal|top"
-                                    android:src="@drawable/hfds" />
-                            </androidx.cardview.widget.CardView>
-                        </RelativeLayout>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="170dp"
+                        app:cardBackgroundColor="#B3806180">
                     </androidx.cardview.widget.CardView>
                     <TextView
                         android:gravity="center_horizontal|top"
                         android:textSize="25dp"
-                        android:textColor="@color/colortext"
-                        android:layout_marginTop="193dp"
-                        android:layout_width="123dp"
+                        android:textColor="#000000"
+                        android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:elevation="10dp"
-                        android:layout_marginStart="115dp"
+                        android:layout_marginTop="180dp"
                         android:text="Jardin" />
-                </RelativeLayout>
+                </androidx.cardview.widget.CardView>
 
-                <RelativeLayout
+                <androidx.cardview.widget.CardView
                     android:id="@+id/pared"
-                    android:gravity="center_horizontal|top"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="240dp"
+                    android:layout_width="170dp"
+                    android:layout_height="225dp"
+                    android:layout_marginStart="217dp"
                     android:clickable="true"
-                    android:foreground="?attr/selectableItemBackgroundBorderless">
+                    android:elevation="5dp"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center_horizontal|top"
+                    app:cardBackgroundColor="#C978C9"
+                    app:cardCornerRadius="23dp"
+                    tools:ignore="SpeakableTextPresentCheck">
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="335dp"
-                        android:layout_height="192dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="1dp"
-                        app:cardCornerRadius="10dp"
-                        android:gravity="center_horizontal|top"
-                        app:cardElevation="2dp"
-                        app:cardBackgroundColor="#72FF7FF2"
-                        tools:ignore="SpeakableTextPresentCheck">
+                        android:layout_width="155dp"
+                        android:layout_height="205dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="10dp">
 
-                        <RelativeLayout
-                            android:layout_width="318dp"
-                            android:layout_height="180dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="7dp"
+                        <ImageView
+                            android:layout_width="209dp"
+                            android:layout_height="215dp"
+                            android:layout_marginStart="-24dp"
+                            android:layout_marginTop="-2dp"
                             android:gravity="center_horizontal|top"
-                            android:background="#00000000"
-                            tools:ignore="SpeakableTextPresentCheck">
+                            android:src="@drawable/pared" />
+                    </androidx.cardview.widget.CardView>
 
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="320dp"
-                                android:layout_height="186dp"
-                                android:elevation="50dp"
-                                android:gravity="center_horizontal|top"
-                                app:cardBackgroundColor="#00C978C9"
-                                app:cardCornerRadius="10dp">
-
-                                <ImageView
-                                    android:layout_width="410dp"
-                                    android:layout_height="210dp"
-                                    android:layout_marginTop="-15dp"
-                                    android:layout_marginStart="-45dp"
-                                    android:gravity="center_horizontal|top"
-                                    android:src="@drawable/pa" />
-                            </androidx.cardview.widget.CardView>
-                        </RelativeLayout>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="170dp"
+                        app:cardBackgroundColor="#B3806180">
                     </androidx.cardview.widget.CardView>
                     <TextView
                         android:gravity="center_horizontal|top"
                         android:textSize="25dp"
-                        android:textColor="@color/colortext"
-                        android:layout_marginTop="193dp"
-                        android:layout_width="123dp"
+                        android:textColor="#000000"
+                        android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:elevation="10dp"
-                        android:layout_marginStart="115dp"
+                        android:layout_marginTop="180dp"
                         android:text="Pared" />
-                </RelativeLayout>
+                </androidx.cardview.widget.CardView>
 
-
-                <RelativeLayout
+                <androidx.cardview.widget.CardView
                     android:id="@+id/religioso"
-                    android:gravity="center_horizontal|top"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="480dp"
+                    android:layout_width="170dp"
+                    android:layout_height="225dp"
+                    android:layout_marginStart="217dp"
+                    android:layout_marginTop="270dp"
                     android:clickable="true"
-                    android:foreground="?attr/selectableItemBackgroundBorderless">
+                    android:elevation="5dp"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center_horizontal|top"
+                    app:cardBackgroundColor="#C978C9"
+                    app:cardCornerRadius="23dp"
+                    tools:ignore="SpeakableTextPresentCheck">
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="335dp"
-                        android:layout_height="192dp"
-                        android:layout_marginStart="9dp"
-                        android:layout_marginTop="1dp"
-                        app:cardCornerRadius="10dp"
-                        android:gravity="center_horizontal|top"
-                        app:cardElevation="2dp"
-                        app:cardBackgroundColor="#72FF7FF2"
-                        tools:ignore="SpeakableTextPresentCheck">
-
-                        <RelativeLayout
-                            android:layout_width="318dp"
-                            android:layout_height="182dp"
-                            android:layout_marginStart="7dp"
-                            android:layout_marginTop="7dp"
+                        android:layout_width="155dp"
+                        android:layout_height="205dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="10dp">
+                        <ImageView
+                            android:layout_width="205dp"
+                            android:layout_height="215dp"
+                            android:layout_marginStart="-24dp"
+                            android:layout_marginTop="-2dp"
                             android:gravity="center_horizontal|top"
-                            android:background="#00000000"
-                            tools:ignore="SpeakableTextPresentCheck">
+                            android:src="@drawable/religioso" />
+                    </androidx.cardview.widget.CardView>
 
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="320dp"
-                                android:layout_height="186dp"
-                                android:elevation="50dp"
-                                android:gravity="center_horizontal|top"
-                                app:cardBackgroundColor="#00C978C9"
-                                app:cardCornerRadius="10dp">
-
-                                <ImageView
-                                    android:layout_width="320dp"
-                                    android:layout_height="320dp"
-                                    android:layout_marginStart="0dp"
-                                    android:layout_marginTop="-45dp"
-                                    android:gravity="center_horizontal|top"
-                                    android:src="@drawable/asf" />
-                            </androidx.cardview.widget.CardView>
-                        </RelativeLayout>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="170dp"
+                        app:cardBackgroundColor="#B3806180">
                     </androidx.cardview.widget.CardView>
                     <TextView
                         android:gravity="center_horizontal|top"
                         android:textSize="25dp"
-                        android:textColor="@color/colortext"
-                        android:layout_marginTop="193dp"
-                        android:layout_width="130dp"
+                        android:textColor="#000000"
+                        android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:elevation="10dp"
-                        android:layout_marginStart="115dp"
+                        android:layout_marginTop="180dp"
                         android:text="Religioso" />
-                </RelativeLayout>
+                </androidx.cardview.widget.CardView>
 
-                <RelativeLayout
+                <androidx.cardview.widget.CardView
                     android:id="@+id/macetas"
-                    android:layout_marginTop="720dp"
-                    android:gravity="center_horizontal|top"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="170dp"
+                    android:layout_height="225dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="270dp"
                     android:clickable="true"
-                    android:foreground="?attr/selectableItemBackgroundBorderless">
+                    android:elevation="5dp"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center_horizontal|top"
+                    app:cardBackgroundColor="#C978C9"
+                    app:cardCornerRadius="23dp"
+                    tools:ignore="SpeakableTextPresentCheck">
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="335dp"
-                        android:layout_height="192dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="1dp"
-                        app:cardCornerRadius="10dp"
-                        android:gravity="center_horizontal|top"
-                        app:cardElevation="2dp"
-                        app:cardBackgroundColor="#72FF7FF2"
-                        tools:ignore="SpeakableTextPresentCheck">
-
-                        <RelativeLayout
-                            android:layout_width="318dp"
-                            android:layout_height="182dp"
-                            android:layout_marginStart="7dp"
-                            android:layout_marginTop="7dp"
+                        android:layout_width="155dp"
+                        android:layout_height="205dp"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="10dp">
+                        <ImageView
+                            android:layout_width="205dp"
+                            android:layout_height="215dp"
+                            android:layout_marginStart="-24dp"
+                            android:layout_marginTop="-2dp"
                             android:gravity="center_horizontal|top"
-                            android:background="#00000000"
-                            tools:ignore="SpeakableTextPresentCheck">
+                            android:src="@drawable/maceteras" />
+                    </androidx.cardview.widget.CardView>
 
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="320dp"
-                                android:layout_height="186dp"
-                                android:elevation="50dp"
-                                android:gravity="center_horizontal|top"
-                                app:cardBackgroundColor="#00C978C9"
-                                app:cardCornerRadius="10dp">
-
-                                <ImageView
-                                    android:layout_width="320dp"
-                                    android:layout_height="200dp"
-                                    android:layout_marginTop="-5dp"
-                                    android:gravity="center_horizontal|top"
-                                    android:src="@drawable/macetas" />
-                            </androidx.cardview.widget.CardView>
-                        </RelativeLayout>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="170dp"
+                        app:cardBackgroundColor="#B3806180">
                     </androidx.cardview.widget.CardView>
                     <TextView
                         android:gravity="center_horizontal|top"
                         android:textSize="25dp"
-                        android:textColor="@color/colortext"
-                        android:layout_marginTop="193dp"
-                        android:layout_width="123dp"
+                        android:textColor="#000000"
+                        android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:elevation="10dp"
-                        android:layout_marginStart="115dp"
-                        android:text="Macetas" />
-                </RelativeLayout>
+                        android:layout_marginTop="180dp"
+                        android:text="Maceteras" />
+                </androidx.cardview.widget.CardView>
 
                 <TextView
                     android:fontFamily="@font/charm"
@@ -287,10 +235,9 @@
                     android:gravity="center"
                     android:textSize="30dp"
                     android:textColor="@color/colortext"
-                    android:layout_marginLeft="11dp"
-                    android:layout_marginTop="950dp"
-                    android:layout_width="443dp"
-                    android:layout_height="68dp"
+                    android:layout_marginTop="550dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:text="¡Pintamos con amor y a tu gusto!" />
             </RelativeLayout>
         </RelativeLayout>
