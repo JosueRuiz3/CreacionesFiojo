@@ -15,17 +15,17 @@ import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.creacionesfiojo.DetalleJardinAdmin;
-import com.example.creacionesfiojo.DetalleParedAdmin;
+import com.example.creacionesfiojo.DetalleMacetaAdmin;
 import com.example.creacionesfiojo.R;
 import com.example.creacionesfiojo.model.jardin;
-import com.example.creacionesfiojo.model.pared;
+import com.example.creacionesfiojo.model.macetas;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.squareup.picasso.Picasso;
 
-public class paredAdapter extends FirestoreRecyclerAdapter<pared, paredAdapter.ViewHolder> {
+public class macetasAdapter extends FirestoreRecyclerAdapter<macetas, macetasAdapter.ViewHolder> {
     private FirebaseFirestore mFirestore = FirebaseFirestore.getInstance();
     Activity activity;
     FragmentManager fm;
@@ -36,28 +36,28 @@ public class paredAdapter extends FirestoreRecyclerAdapter<pared, paredAdapter.V
      *
      * @param options
      */
-    public paredAdapter(@NonNull FirestoreRecyclerOptions<pared> options, Activity activity) {
+    public macetasAdapter(@NonNull FirestoreRecyclerOptions<macetas> options, Activity activity) {
         super(options);
         this.activity = activity;
         this.fm = fm;
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull paredAdapter.ViewHolder holder, int position, @NonNull pared Pared) {
+    protected void onBindViewHolder(@NonNull macetasAdapter.ViewHolder holder, int position, @NonNull macetas Macetas) {
 
         DocumentSnapshot documentSnapshot = getSnapshots().getSnapshot(holder.getAdapterPosition());
         final String id = documentSnapshot.getId();
 
-        holder.nombre.setText(Pared.getNombre());
-        holder.precio.setText(Pared.getPrecio());
+        holder.nombre.setText(Macetas.getNombre());
+        holder.precio.setText(Macetas.getPrecio());
 
-        String pared = Pared.getPared();
+        String macetas = Macetas.getMacetas();
         try {
-            if (!pared.equals(""))
+            if (!macetas.equals(""))
                 Picasso.get()
-                        .load(pared)
+                        .load(macetas)
                         .resize(1080, 1440)
-                        .into(holder.pared);
+                        .into(holder.macetas);
         }catch (Exception e) {
             Log.d("Exception", "e: " + e);
         }
@@ -65,8 +65,8 @@ public class paredAdapter extends FirestoreRecyclerAdapter<pared, paredAdapter.V
         holder.editar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(activity, DetalleParedAdmin.class);
-                i.putExtra("id_pared", id);
+                Intent i = new Intent(activity, DetalleMacetaAdmin.class);
+                i.putExtra("id_macetas", id);
                 activity.startActivity(i);
             }
         });
@@ -74,14 +74,14 @@ public class paredAdapter extends FirestoreRecyclerAdapter<pared, paredAdapter.V
 
     @NonNull
     @Override
-    public paredAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_pared, parent, false);
-        return new paredAdapter.ViewHolder(v);
+    public macetasAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_maceta, parent, false);
+        return new macetasAdapter.ViewHolder(v);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView nombre, precio, dimensiones, material;
-        ImageView pared, eliminar;
+        TextView nombre, precio;
+        ImageView macetas, eliminar;
         RelativeLayout editar;
 
         public ViewHolder(@NonNull View itemView) {
@@ -89,7 +89,7 @@ public class paredAdapter extends FirestoreRecyclerAdapter<pared, paredAdapter.V
 
             nombre = itemView.findViewById(R.id.nombre);
             precio = itemView.findViewById(R.id.precio);
-            pared = itemView.findViewById(R.id.pared);
+            macetas = itemView.findViewById(R.id.maceta);
             editar = itemView.findViewById(R.id.btn_editar);
             eliminar = itemView.findViewById(R.id.btn_eliminar);
 

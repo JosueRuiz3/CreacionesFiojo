@@ -30,7 +30,6 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 public class jardinAdapterPrincipal extends FirestoreRecyclerAdapter<jardin, jardinAdapterPrincipal.ViewHolder>{
-
     private FirebaseFirestore mFirestore = FirebaseFirestore.getInstance();
     Activity activity;
     FragmentManager fm;
@@ -46,8 +45,6 @@ public class jardinAdapterPrincipal extends FirestoreRecyclerAdapter<jardin, jar
         this.activity = activity;
         this.fm = fm;
     }
-
-
 
     @Override
     protected void onBindViewHolder(@NonNull jardinAdapterPrincipal.ViewHolder holder, int position, @NonNull jardin Jardin) {
@@ -90,7 +87,6 @@ public class jardinAdapterPrincipal extends FirestoreRecyclerAdapter<jardin, jar
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView nombre, precio, dimensiones, material;
         ImageView jardin;
-
         RelativeLayout editar;
 
         public ViewHolder(@NonNull View itemView) {

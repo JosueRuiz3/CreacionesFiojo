@@ -69,7 +69,6 @@ public class paredAdapterPrincipal extends FirestoreRecyclerAdapter<pared, pared
                 activity.startActivity(i);
             }
         });
-
     }
 
     @NonNull

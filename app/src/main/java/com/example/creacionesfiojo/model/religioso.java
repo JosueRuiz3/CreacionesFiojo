@@ -1,15 +1,15 @@
 package com.example.creacionesfiojo.model;
 
-public class pared {
+public class religioso {
 
-    String nombre, pared, precio, dimensiones, material ;
+    String nombre, religioso, precio, dimensiones, material ;
 
-    public pared() {
+    public religioso() {
     }
 
-    public pared(String nombre, String pared, String precio, String dimensiones, String material) {
+    public religioso(String nombre, String religioso, String precio, String dimensiones, String material) {
         this.nombre = nombre;
-        this.pared = pared;
+        this.religioso = religioso;
         this.precio = precio;
         this.dimensiones = dimensiones;
         this.material = material;
@@ -23,12 +23,12 @@ public class pared {
         this.nombre = nombre;
     }
 
-    public String getPared() {
-        return pared;
+    public String getReligioso() {
+        return religioso;
     }
 
-    public void setPared(String pared) {
-        this.pared = pared;
+    public void setReligioso(String religioso) {
+        this.religioso = religioso;
     }
 
     public String getPrecio() {

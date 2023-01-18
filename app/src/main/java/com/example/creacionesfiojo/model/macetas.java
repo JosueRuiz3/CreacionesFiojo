@@ -1,15 +1,15 @@
 package com.example.creacionesfiojo.model;
 
-public class pared {
+public class macetas {
 
-    String nombre, pared, precio, dimensiones, material ;
+    String nombre, macetas, precio, dimensiones, material ;
 
-    public pared() {
+    public macetas() {
     }
 
-    public pared(String nombre, String pared, String precio, String dimensiones, String material) {
+    public macetas(String nombre, String macetas, String precio, String dimensiones, String material) {
         this.nombre = nombre;
-        this.pared = pared;
+        this.macetas = macetas;
         this.precio = precio;
         this.dimensiones = dimensiones;
         this.material = material;
@@ -23,12 +23,12 @@ public class pared {
         this.nombre = nombre;
     }
 
-    public String getPared() {
-        return pared;
+    public String getMacetas() {
+        return macetas;
     }
 
-    public void setPared(String pared) {
-        this.pared = pared;
+    public void setMacetas(String macetas) {
+        this.macetas = macetas;
     }
 
     public String getPrecio() {
