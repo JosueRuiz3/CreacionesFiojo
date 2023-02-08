@@ -4,8 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +16,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+import com.example.creacionesfiojo.adapter.jardinAdapter;
+import com.example.creacionesfiojo.adapter.macetasAdapter;
+import com.example.creacionesfiojo.model.jardin;
+import com.example.creacionesfiojo.model.macetas;
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -30,6 +38,7 @@ public class MacetaAdmin extends AppCompatActivity {
     private RelativeLayout editar;
     private Context context;
     private RelativeLayout btnatras;
+    private macetasAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,6 +121,39 @@ public class MacetaAdmin extends AppCompatActivity {
                 return true;
             }
         });
+        setUpRecyclerView();
+    }
 
+    @SuppressLint("NotifyDataSetChanged")
+    private void setUpRecyclerView() {
+        mRecycler = findViewById(R.id.recyclerViewSingle);
+        mRecycler.setLayoutManager(new LinearLayoutManager(this));
+
+        Query query = mFirestore.collection("Ceramica-Macetas");
+
+        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 2);
+        mRecycler.setLayoutManager(mLayoutManager);
+
+        FirestoreRecyclerOptions<macetas> firestoreRecyclerOptions =
+                new FirestoreRecyclerOptions.Builder<macetas>().setQuery(query, macetas.class).build();
+
+        mAdapter= new macetasAdapter(firestoreRecyclerOptions, this);
+        mAdapter.notifyDataSetChanged();
+        mRecycler.setAdapter(mAdapter);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mAdapter.startListening();
+        mRecycler.getRecycledViewPool().clear();
+        mAdapter.notifyDataSetChanged();
+        mAdapter.startListening();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mAdapter.stopListening();
     }
 }

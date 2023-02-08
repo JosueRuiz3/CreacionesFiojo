@@ -21,7 +21,7 @@
 
             <item
                 android:id="@+id/paredP"
-                android:icon="@drawable/paredh"
+                android:icon="@drawable/paredn"
                 android:textSize="17dp"
                 android:title="Pared"
                 android:textColor="@color/black"/>

@@ -70,7 +70,7 @@
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck">
 
                 <ImageView
-                    android:id="@+id/jardin_photo"
+                    android:id="@+id/macetas_photo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
             </androidx.cardview.widget.CardView>

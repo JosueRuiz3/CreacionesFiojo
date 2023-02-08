@@ -72,7 +72,7 @@ public class DetalleJardinAdmin extends AppCompatActivity {
         jardin_photo = findViewById(R.id.jardin_photo);
         btn_eliminar = findViewById(R.id.btn_eliminar);
         btn_editar = findViewById(R.id.btn_editar);
-        btnatras = (RelativeLayout) findViewById(R.id.btnatras);
+        btnatras =  findViewById(R.id.btnatras);
         txtnombre = findViewById(R.id.txtnombre);
         txtprecio = findViewById(R.id.txtprecio);
         txtdimensiones = findViewById(R.id.txtdimensiones);
