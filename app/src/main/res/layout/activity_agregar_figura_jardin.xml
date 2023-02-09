@@ -21,14 +21,14 @@
             android:layout_height="860dp">
 
             <TextView
-                android:textSize="30dp"
+                android:textSize="25dp"
                 android:textColor="@color/colortext"
-                android:layout_width="200dp"
+                android:layout_width="430dp"
                 android:layout_height="50dp"
                 android:elevation="20dp"
-                android:layout_marginLeft="150dp"
+                android:layout_marginLeft="50dp"
                 android:layout_marginTop="0dp"
-                android:text="Agregar" />
+                android:text="Agregar ceramica para Jardin" />
 
             <!-- btn atras -->
             <RelativeLayout
@@ -61,8 +61,8 @@
                     android:id="@+id/topAppBar"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
-                    app:navigationIcon="@drawable/menu_1"
-                    android:background="#FF7FF2" />
+                    android:background="#FF7FF2"
+                    app:navigationIcon="@drawable/menu_1" />
             </com.google.android.material.appbar.AppBarLayout>
 
             <androidx.cardview.widget.CardView

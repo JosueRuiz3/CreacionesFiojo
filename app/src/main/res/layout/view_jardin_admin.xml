@@ -52,24 +52,25 @@
         android:layout_width="160dp"
         android:layout_height="45dp"
         android:layout_marginLeft="14dp"
-        android:layout_marginTop="230dp"
+        android:layout_marginTop="224dp"
         android:elevation="10dp"
         android:shadowColor="#40000000"
         android:text="Precio"
         android:textColor="@color/colortext"
-        android:gravity="center_horizontal|top"
-        android:textSize="25sp" />
+        android:gravity="center"
+        android:textSize="25dp" />
 
     <TextView
         android:id="@+id/signoColon"
         android:layout_width="16dp"
-        android:layout_height="27dp"
+        android:layout_height="45dp"
         android:layout_marginStart="42dp"
-        android:layout_marginTop="235dp"
+        android:layout_marginTop="226dp"
         android:elevation="10dp"
         android:shadowColor="#40000000"
         android:text="₡"
         android:textColor="@color/colortext"
+        android:gravity="center"
         android:textSize="20dp" />
 
     <TextView

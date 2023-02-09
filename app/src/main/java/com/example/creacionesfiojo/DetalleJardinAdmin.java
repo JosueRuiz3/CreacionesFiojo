@@ -82,101 +82,6 @@ public class DetalleJardinAdmin extends AppCompatActivity {
         idd = id;
         get(id);
 
-        btn_selecfoto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                selectImage();
-            }
-        });
-
-        btn_habilitar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(DetalleJardinAdmin.this);
-                builder.setMessage("¿Desea activar las casillas de edicion?")
-                        .setPositiveButton("SI", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                txtnombre.setFocusableInTouchMode(true);
-                                txtprecio.setFocusableInTouchMode(true);
-                                txtmaterial.setFocusableInTouchMode(true);
-                                txtdimensiones.setFocusableInTouchMode(true);
-                            }
-                        })
-                        .setNegativeButton("NO", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-
-                            }
-                        }).show();
-
-            }
-        });
-
-        btn_editar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(DetalleJardinAdmin.this);
-                builder.setMessage("¿Desea editar este producto?")
-                        .setPositiveButton("SI", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                idd = id;
-                                checkField(txtnombre);
-                                checkField(txtdimensiones);
-                                checkField(txtmaterial);
-                                checkField(txtprecio);
-
-                                String nombre = txtnombre.getText().toString().trim();
-                                String dimensiones = txtdimensiones.getText().toString().trim();
-                                String material = txtmaterial.getText().toString().trim();
-                                String precio = txtprecio.getText().toString().trim();
-                                String download_uri = jardin_photo.getImageMatrix().toString().trim();
-
-                                if (!nombre.isEmpty() && !dimensiones.isEmpty() && !material.isEmpty() && !precio.isEmpty() && !download_uri.isEmpty()) {
-                                    subirDatos(nombre, dimensiones, material, precio, id);
-
-
-                                } else {
-                                    Toast.makeText(DetalleJardinAdmin.this, "Ingrese los datos", Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                        })
-                        .setNegativeButton("NO", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-
-                            }
-                        }).show();
-
-            }
-        });
-
-        btn_eliminar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(DetalleJardinAdmin.this);
-                builder.setMessage("¿Desea eliminar este producto?")
-                        .setPositiveButton("SI", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                idd = id;
-                                delete(id);
-                                finish();
-                                Intent intent = new Intent(DetalleJardinAdmin.this, JardinAdmin.class);
-                                startActivity(intent);
-                            }
-                        })
-                        .setNegativeButton("NO", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-
-                            }
-                        }).show();
-            }
-        });
-
-
         OnBackPressedCallback callback = new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
@@ -258,6 +163,98 @@ public class DetalleJardinAdmin extends AppCompatActivity {
             }
         });
 
+        btn_selecfoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectImage();
+            }
+        });
+
+        btn_habilitar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(DetalleJardinAdmin.this);
+                builder.setMessage("¿Desea activar las casillas de edicion?")
+                        .setPositiveButton("SI", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                txtnombre.setFocusableInTouchMode(true);
+                                txtprecio.setFocusableInTouchMode(true);
+                                txtmaterial.setFocusableInTouchMode(true);
+                                txtdimensiones.setFocusableInTouchMode(true);
+                            }
+                        })
+                        .setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                            }
+                        }).show();
+
+            }
+        });
+
+        btn_editar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(DetalleJardinAdmin.this);
+                builder.setMessage("¿Desea editar este producto?")
+                        .setPositiveButton("SI", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                idd = id;
+                                checkField(txtnombre);
+                                checkField(txtdimensiones);
+                                checkField(txtmaterial);
+                                checkField(txtprecio);
+
+                                String nombre = txtnombre.getText().toString().trim();
+                                String dimensiones = txtdimensiones.getText().toString().trim();
+                                String material = txtmaterial.getText().toString().trim();
+                                String precio = txtprecio.getText().toString().trim();
+                                String download_uri = jardin_photo.getImageMatrix().toString().trim();
+
+                                if (!nombre.isEmpty() && !dimensiones.isEmpty() && !material.isEmpty() && !precio.isEmpty() && !download_uri.isEmpty()) {
+                                    subirDatos(nombre, dimensiones, material, precio, id);
+
+
+                                } else {
+                                    Toast.makeText(DetalleJardinAdmin.this, "Ingrese los datos", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        })
+                        .setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                            }
+                        }).show();
+            }
+        });
+
+        btn_eliminar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(DetalleJardinAdmin.this);
+                builder.setMessage("¿Desea eliminar este producto?")
+                        .setPositiveButton("SI", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                idd = id;
+                                delete(id);
+                                finish();
+                                Intent intent = new Intent(DetalleJardinAdmin.this, JardinAdmin.class);
+                                startActivity(intent);
+                            }
+                        })
+                        .setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                            }
+                        }).show();
+            }
+        });
     }
 
     private void selectImage() {
@@ -277,6 +274,7 @@ public class DetalleJardinAdmin extends AppCompatActivity {
             jardin_photo.setImageURI(imageUri);
         }
     }
+
     private void subirDatos(String nombre, String dimensiones, String material, String precio, String id) {
 
         if(imageUri!=null)     {
@@ -329,8 +327,6 @@ public class DetalleJardinAdmin extends AppCompatActivity {
                     }) ;
         }
     }
-
-
 
     private void get(String id){
         mfirestore.collection("Ceramica-Jardin").document(id).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -398,6 +394,4 @@ public class DetalleJardinAdmin extends AppCompatActivity {
         onBackPressed();
         return false;
     }
-
-
 }

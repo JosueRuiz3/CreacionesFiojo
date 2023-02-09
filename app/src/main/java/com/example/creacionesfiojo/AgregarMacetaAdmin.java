@@ -12,6 +12,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -30,11 +31,13 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -75,7 +78,7 @@ public class AgregarMacetaAdmin extends AppCompatActivity {
         btnagregar = findViewById(R.id.btnagregar);
         mfirestore = FirebaseFirestore.getInstance();
         mAuth = FirebaseAuth.getInstance();
-        storageReference = FirebaseStorage.getInstance().getReference().child("ImageFolder");
+        storageReference = FirebaseStorage.getInstance().getReference().child("ImageFolderMacetas");
         btn_selecfoto = findViewById(R.id.btn_selecfoto);
         macetas_photo = findViewById(R.id.macetas_photo);
         btn_selecfoto = findViewById(R.id.btn_selecfoto);
@@ -214,7 +217,6 @@ public class AgregarMacetaAdmin extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == 100 && data != null && data.getData() != null) {
-
             imageUri = data.getData();
             macetas_photo.setImageURI(imageUri);
         }
@@ -230,7 +232,7 @@ public class AgregarMacetaAdmin extends AppCompatActivity {
             progressDialog.setTitle("Uploading...");
             progressDialog.show();
 
-            StorageReference reference = storageReference.child("images/" + UUID.randomUUID().toString());
+            StorageReference reference = storageReference.child("macetas/" + UUID.randomUUID().toString());
 
             reference.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override

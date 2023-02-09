@@ -29,7 +29,6 @@ import com.google.firebase.firestore.Query;
 
 public class MacetaAdmin extends AppCompatActivity {
 
-
     private View cerrarsesion;
     private FirebaseAuth mAuth;
     private FirebaseFirestore mFirestore;
@@ -81,11 +80,6 @@ public class MacetaAdmin extends AppCompatActivity {
                         startActivity(new Intent(MacetaAdmin.this, AdminActivity.class));
                         break;
 
-                    case R.id.agregarJadrinA:
-                        finish();
-                        startActivity(new Intent(MacetaAdmin.this, AgregarParedAdmin.class));
-                        break;
-
                     case R.id.jardinA:
                         FirebaseAuth.getInstance().signOut();
                         startActivity(new Intent(MacetaAdmin.this, JardinAdmin.class));
@@ -110,6 +104,12 @@ public class MacetaAdmin extends AppCompatActivity {
                         finish();
                         break;
 
+                    case R.id.agregarJadrinA:
+                        FirebaseAuth.getInstance().signOut();
+                        startActivity(new Intent(MacetaAdmin.this, AgregarMacetaAdmin.class));
+                        finish();
+                        break;
+
                     case R.id.cerrarsesionA:
                         FirebaseAuth.getInstance().signOut();
                         startActivity(new Intent(MacetaAdmin.this, LoginActivity.class));
@@ -121,6 +121,7 @@ public class MacetaAdmin extends AppCompatActivity {
                 return true;
             }
         });
+
         setUpRecyclerView();
     }
 

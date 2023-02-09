@@ -285,8 +285,7 @@ public class AgregarParedAdmin extends AppCompatActivity {
         }
         return valid;
     }
-
-
+    
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
