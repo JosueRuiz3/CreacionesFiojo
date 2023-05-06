@@ -204,13 +204,10 @@ public class AgregarFiguraJardin extends AppCompatActivity {
         String precio = txtprecio.getText().toString().trim();
         String imagen = jardin_photo.getImageMatrix().toString().trim();
 
-        progressBar.setVisibility(View.VISIBLE);
         if (!nombre.isEmpty() && !dimensiones.isEmpty() && !material.isEmpty() && !precio.isEmpty() && !imagen.isEmpty()) {
-            progressBar.setVisibility(View.GONE);
             subirDatos(nombre, dimensiones, material, precio);
 
         } else {
-            progressBar.setVisibility(View.GONE);
             Toast.makeText(AgregarFiguraJardin.this, "Ingrese los datos", Toast.LENGTH_SHORT).show();
         }
     }
